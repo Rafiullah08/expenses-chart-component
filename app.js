@@ -12,9 +12,16 @@ function generateChart() {
   new Chart(document.getElementById("chart"), {
     type: "bar",
     data: {
-      labels: data.map((item) => item.day),
+      labels: data.map((item) => {
+      return  item.day
+       
+      }),
       datasets: [{
-        data: data.map((item) => item.amount),
+        data: data.map((item) => {
+        return item.amount  
+        }),
+
+      
         backgroundColor: "hsl(10, 79%, 65%)",
         hoverBackgroundColor: "hsl(10, 79%, 75%)",
       }],
